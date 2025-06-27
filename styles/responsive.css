@@ -1,0 +1,379 @@
+/* Responsive Design Styles */
+
+/* Large Devices (Desktops, 1200px and up) */
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 var(--spacing-4);
+    }
+    
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+/* Medium Devices (Tablets, 992px and down) */
+@media (max-width: 992px) {
+    :root {
+        --font-size-5xl: 2.5rem;
+        --font-size-4xl: 2rem;
+        --font-size-3xl: 1.625rem;
+        --spacing-20: 4rem;
+        --spacing-16: 3rem;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 80px;
+        flex-direction: column;
+        background-color: hsl(var(--background));
+        width: 100%;
+        text-align: center;
+        transition: var(--transition);
+        box-shadow: var(--shadow-lg);
+        padding: var(--spacing-8) 0;
+        gap: var(--spacing-4);
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+    
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+    
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-12);
+    }
+    
+    .about-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-12);
+    }
+    
+    .skills-icons {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+    
+    .footer-content {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+/* Small Devices (Landscape Phones, 768px and down) */
+@media (max-width: 768px) {
+    :root {
+        --font-size-5xl: 2rem;
+        --font-size-4xl: 1.75rem;
+        --font-size-3xl: 1.5rem;
+        --font-size-2xl: 1.25rem;
+        --spacing-20: 3rem;
+        --spacing-16: 2.5rem;
+        --spacing-12: 2rem;
+        --spacing-10: 1.5rem;
+        --spacing-8: 1.25rem;
+    }
+    
+    .container {
+        padding: 0 var(--spacing-3);
+    }
+    
+    .nav-container {
+        padding: 0 var(--spacing-4);
+    }
+    
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .hero-title {
+        font-size: var(--font-size-4xl);
+    }
+    
+    .hero-subtitle {
+        font-size: var(--font-size-xl);
+    }
+    
+    .hero-description {
+        font-size: var(--font-size-base);
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-6);
+    }
+    
+    .about-stats {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-4);
+    }
+    
+    .timeline {
+        padding-left: var(--spacing-6);
+    }
+    
+    .timeline-item {
+        padding-left: var(--spacing-6);
+    }
+    
+    .skills-icons {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-4);
+    }
+    
+    .social-links {
+        gap: var(--spacing-3);
+    }
+    
+    .social-link {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/* Extra Small Devices (Portrait Phones, 576px and down) */
+@media (max-width: 576px) {
+    :root {
+        --font-size-5xl: 1.75rem;
+        --font-size-4xl: 1.5rem;
+        --font-size-3xl: 1.25rem;
+        --font-size-2xl: 1.125rem;
+        --spacing-20: 2.5rem;
+        --spacing-16: 2rem;
+        --spacing-12: 1.5rem;
+        --spacing-10: 1.25rem;
+        --spacing-8: 1rem;
+    }
+    
+    .container {
+        padding: 0 var(--spacing-2);
+    }
+    
+    .nav-container {
+        padding: 0 var(--spacing-3);
+        height: 70px;
+    }
+    
+    .nav-menu {
+        top: 70px;
+    }
+    
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .hero-buttons {
+        gap: var(--spacing-3);
+    }
+    
+    .btn {
+        padding: var(--spacing-2) var(--spacing-4);
+        font-size: var(--font-size-sm);
+    }
+    
+    .section-title {
+        font-size: var(--font-size-3xl);
+    }
+    
+    .section-subtitle {
+        font-size: var(--font-size-base);
+    }
+    
+    .project-image {
+        height: 150px;
+        font-size: var(--font-size-3xl);
+    }
+    
+    .project-content {
+        padding: var(--spacing-4);
+    }
+    
+    .contact-item {
+        padding: var(--spacing-4);
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .skills-icons {
+        grid-template-columns: 1fr;
+    }
+    
+    .skill-icon {
+        padding: var(--spacing-4);
+    }
+}
+
+/* Extra Extra Small Devices (Very Small Phones, 375px and down) */
+@media (max-width: 375px) {
+    :root {
+        --font-size-5xl: 1.5rem;
+        --font-size-4xl: 1.25rem;
+        --font-size-3xl: 1.125rem;
+        --spacing-20: 2rem;
+        --spacing-16: 1.5rem;
+    }
+    
+    .profile-image {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .hero-title {
+        font-size: var(--font-size-3xl);
+    }
+    
+    .hero-subtitle {
+        font-size: var(--font-size-lg);
+    }
+    
+    .about-card {
+        padding: var(--spacing-6);
+    }
+    
+    .project-tech {
+        gap: var(--spacing-1);
+    }
+    
+    .tech-tag {
+        font-size: var(--font-size-xs);
+        padding: 2px var(--spacing-2);
+    }
+}
+
+/* Landscape Orientation Adjustments */
+@media (max-height: 600px) and (orientation: landscape) {
+    .hero {
+        min-height: auto;
+        padding: var(--spacing-12) 0;
+    }
+    
+    .profile-image {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .hero-title {
+        font-size: var(--font-size-3xl);
+        margin-bottom: var(--spacing-2);
+    }
+    
+    .hero-subtitle {
+        font-size: var(--font-size-lg);
+        margin-bottom: var(--spacing-3);
+    }
+    
+    .hero-description {
+        margin-bottom: var(--spacing-4);
+    }
+    
+    .hero-buttons {
+        margin-bottom: var(--spacing-4);
+    }
+    
+    .scroll-indicator {
+        display: none;
+    }
+}
+
+/* High DPI / Retina Display Optimizations */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .profile-image {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Dark Mode Support (System Preference) */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: 224 71% 4%; /* #020817 */
+        --foreground: 210 20% 98%; /* #f8fafc */
+        --card: 224 71% 4%; /* #020817 */
+        --card-foreground: 210 20% 98%; /* #f8fafc */
+        --secondary: 215 28% 17%; /* #1e293b */
+        --secondary-foreground: 210 20% 98%; /* #f8fafc */
+        --muted: 215 28% 17%; /* #1e293b */
+        --muted-foreground: 217 11% 65%; /* #94a3b8 */
+        --border: 215 28% 17%; /* #1e293b */
+    }
+}
+
+/* Reduced Motion Preferences */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .scroll-indicator {
+        animation: none;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .navbar,
+    .scroll-indicator,
+    .hamburger {
+        display: none;
+    }
+    
+    .hero {
+        min-height: auto;
+        page-break-after: always;
+    }
+    
+    .section-title {
+        page-break-after: avoid;
+    }
+    
+    .project-card,
+    .contact-item {
+        page-break-inside: avoid;
+    }
+    
+    .footer {
+        page-break-before: always;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+    }
+    
+    .btn {
+        border: 1px solid #000;
+        background: none !important;
+        color: #000 !important;
+    }
+}

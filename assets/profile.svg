@@ -1,0 +1,96 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="100" cy="100" r="100" fill="url(#gradientBackground)"/>
+  
+  <!-- Person Silhouette -->
+  <g transform="translate(100, 100)">
+    <!-- Head -->
+    <circle cx="0" cy="-20" r="25" fill="url(#gradientPerson)"/>
+    
+    <!-- Body -->
+    <path d="M-35 10 C-35 -5 -20 -10 0 -10 C20 -10 35 -5 35 10 L35 70 C35 85 20 90 0 90 C-20 90 -35 85 -35 70 Z" fill="url(#gradientPerson)"/>
+    
+    <!-- Arms -->
+    <ellipse cx="-45" cy="15" rx="12" ry="30" fill="url(#gradientPerson)"/>
+    <ellipse cx="45" cy="15" rx="12" ry="30" fill="url(#gradientPerson)"/>
+    
+    <!-- Tech Elements -->
+    <!-- Code Brackets -->
+    <path d="M-60 -40 L-70 -30 L-60 -20" stroke="#3B82F6" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M60 -40 L70 -30 L60 -20" stroke="#3B82F6" stroke-width="3" fill="none" stroke-linecap="round"/>
+    
+    <!-- Binary Code -->
+    <text x="-75" y="0" font-family="monospace" font-size="8" fill="#3B82F6" opacity="0.7">101</text>
+    <text x="55" y="0" font-family="monospace" font-size="8" fill="#3B82F6" opacity="0.7">010</text>
+    
+    <!-- Terminal Window -->
+    <rect x="-20" y="50" width="40" height="25" rx="3" fill="#1E293B" stroke="#3B82F6" stroke-width="1"/>
+    <circle cx="-15" cy="55" r="2" fill="#EF4444"/>
+    <circle cx="-10" cy="55" r="2" fill="#F59E0B"/>
+    <circle cx="-5" cy="55" r="2" fill="#10B981"/>
+    <rect x="-18" y="60" width="36" height="2" fill="#3B82F6" opacity="0.8"/>
+    <rect x="-18" y="63" width="24" height="2" fill="#3B82F6" opacity="0.6"/>
+    <rect x="-18" y="66" width="30" height="2" fill="#3B82F6" opacity="0.4"/>
+  </g>
+  
+  <!-- Floating Tech Icons -->
+  <g opacity="0.6">
+    <!-- HTML Tag -->
+    <text x="30" y="50" font-family="monospace" font-size="12" fill="#E34F26" transform="rotate(-15 30 50)">&lt;/&gt;</text>
+    
+    <!-- CSS Curly Braces -->
+    <text x="160" y="60" font-family="monospace" font-size="14" fill="#1572B6" transform="rotate(20 160 60)">{ }</text>
+    
+    <!-- JavaScript -->
+    <text x="40" y="170" font-family="monospace" font-size="10" fill="#F7DF1E" transform="rotate(-10 40 170)">JS</text>
+    
+    <!-- Git Branch -->
+    <path d="M150 140 Q155 135 160 140 Q155 145 150 140 M155 140 L155 155" stroke="#F05032" stroke-width="2" fill="none" stroke-linecap="round"/>
+    
+    <!-- Database Icon -->
+    <ellipse cx="170" cy="130" rx="8" ry="4" fill="none" stroke="#336791" stroke-width="2"/>
+    <ellipse cx="170" cy="135" rx="8" ry="4" fill="none" stroke="#336791" stroke-width="2"/>
+    <path d="M162 130 L162 135 M178 130 L178 135" stroke="#336791" stroke-width="2"/>
+  </g>
+  
+  <!-- Gradient Definitions -->
+  <defs>
+    <linearGradient id="gradientBackground" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F8FAFC;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E2E8F0;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="gradientPerson" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1E40AF;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Animated Elements -->
+  <style>
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    
+    .float-animation {
+      animation: float 3s ease-in-out infinite;
+    }
+    
+    .rotate-animation {
+      animation: rotate 20s linear infinite;
+      transform-origin: center;
+    }
+  </style>
+  
+  <!-- Apply animations -->
+  <script>
+    // Add CSS classes for animations
+    document.querySelector('g[opacity="0.6"]').classList.add('float-animation');
+  </script>
+</svg>
